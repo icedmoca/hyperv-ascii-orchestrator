@@ -4,7 +4,7 @@
 
 ---
 
-![Working](https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif)
+![Working](https://raw.githubusercontent.com/icedmoca/hyperv-ascii-orchestrator/refs/heads/main/recording.gif)
 
 ## Requirements
 
