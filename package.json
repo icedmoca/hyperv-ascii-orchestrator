@@ -1,0 +1,55 @@
+{
+  "name": "hyperv-dashboard",
+  "version": "1.0.0",
+  "description": "Local Hyper-V management dashboard (Electron)",
+  "main": "electron/main.js",
+  "author": "",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "electron": "electron .",
+    "dist": "electron-builder --win --x64",
+    "dist:dir": "electron-builder --win --x64 --dir"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "build": {
+    "appId": "com.hypervdashboard.app",
+    "productName": "Hyper-V Dashboard",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "package.json",
+      "electron/**/*",
+      "server/**/*",
+      "public/**/*"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "server/**/*",
+      "public/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        },
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^41.0.3",
+    "electron-builder": "^26.8.1"
+  }
+}

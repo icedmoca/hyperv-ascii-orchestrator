@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyper-V Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <div class="perm-banner hidden" id="permBanner"></div>
+    <header class="header">
+      <div id="electronControls" class="electron-window-controls hidden" aria-hidden="true">
+        <button type="button" class="electron-winbtn electron-min" id="electronMin" title="Minimize" aria-label="Minimize">─</button>
+        <button type="button" class="electron-winbtn electron-max" id="electronMax" title="Maximize" aria-label="Maximize">□</button>
+        <button type="button" class="electron-winbtn electron-close" id="electronClose" title="Close" aria-label="Close">×</button>
+      </div>
+      <div id="headerAscii" class="header-ascii header-drag-region"></div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div id="sidebarMount"></div>
+      </aside>
+
+      <main class="main">
+        <div class="panel vms-panel" id="vmsPanel">
+          <div id="vmTableMount" class="ascii-panel"></div>
+          <div id="vmGraphMount" class="ascii-panel vm-graph-mount hidden" aria-live="polite"></div>
+        </div>
+
+        <div class="panel create-panel hidden" id="createPanel">
+          <div id="createFrameMount" class="ascii-panel ascii-panel-stack"></div>
+        </div>
+
+        <div class="panel tool-panel hidden" id="toolPanel">
+          <div id="toolTitleAscii" class="ascii-panel"></div>
+          <div id="toolBody" class="tool-body"></div>
+        </div>
+
+        <div class="panel creds-panel hidden" id="credsPanel">
+          <div class="creds-wrap">
+            <div id="credsAsciiMount" class="ascii-panel"></div>
+            <div class="creds-form">
+              <label>Computer <span class="hint" id="localHostHint"></span></label>
+              <input type="text" id="credComputer" class="input input-wide" placeholder="Leave empty for this PC (e.g. MEOW)" />
+              <label>Username</label>
+              <input type="text" id="credUser" class="input input-wide" placeholder="MEOW\user or .\user" autocomplete="username" />
+              <label>Password</label>
+              <input type="password" id="credPass" class="input input-wide" placeholder="Password" autocomplete="current-password" />
+              <div class="creds-btns">
+                <button type="button" class="btn" id="btnCredSave">Save &amp; use</button>
+                <button type="button" class="btn" id="btnCredTest">Test</button>
+                <button type="button" class="btn" id="btnCredClear">Clear saved</button>
+              </div>
+              <p class="creds-status" id="credsStatus"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel detail-panel hidden" id="detailPanel">
+          <div id="detailMount" class="ascii-panel"></div>
+        </div>
+      </main>
+
+      <aside class="actions">
+        <div id="actionsMount"></div>
+      </aside>
+    </div>
+
+    <div class="modal hidden" id="modal">
+      <pre class="modal-box" id="modalBox"></pre>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
