@@ -4,6 +4,8 @@
 
 ---
 
+![Working](https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif)
+
 ## Requirements
 
 - **Windows 11** (or Windows 10 with Hyper-V)
