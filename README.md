@@ -1,7 +1,8 @@
 # hyperv-ascii-orchestrator
-## Hyper-V Dashboard
 
-Local web-based management dashboard for Hyper-V on Windows 11. Runs entirely on localhost with no cloud dependencies.
+> Local web-based management dashboard for Hyper-V on Windows 11. Runs entirely on localhost with no cloud dependencies.
+
+---
 
 ## Requirements
 
