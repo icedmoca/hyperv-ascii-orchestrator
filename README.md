@@ -1,6 +1,6 @@
 # hyperv-ascii-orchestrator
 
-> Local web-based management dashboard for Hyper-V on Windows 11. Runs entirely on localhost with no cloud dependencies.
+> Local web management dashboard for Hyper-V on Windows 11. Runs entirely on localhost with no cloud dependencies.
 
 ---
 
@@ -198,10 +198,8 @@ Rebuild with `npm run dist`.
 
 | Issue | What to try |
 |-------|-------------|
-| **Port 3780 in use** | Close other instances or set `PORT` before starting; portable app still expects the embedded server on that port unless something else is already serving the UI. |
 | **Antivirus / SmartScreen** | Unsigned builds may trigger warnings; code signing is a separate setup. |
 | **Build fails on download** | Corporate proxy/firewall — ensure GitHub (Electron, builder binaries) is reachable. |
-| **`npm run dist` not found** | Run from repo root; run `npm install` first. |
 
 ---
 
