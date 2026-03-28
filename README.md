@@ -2,6 +2,8 @@
 
 > Local web management dashboard for Hyper-V on Windows 11. Runs entirely on localhost with no cloud dependencies.
 
+## I need to add google cloud and amazon web servers orchestrator to the stack so this becomes a on demand infrastructure launcher
+
 ---
 
 ![Working](https://raw.githubusercontent.com/icedmoca/hyperv-ascii-orchestrator/refs/heads/main/recording.gif)
